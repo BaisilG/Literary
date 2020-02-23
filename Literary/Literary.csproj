@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<LangVersion>8.0</LangVersion>
+		<Nullable>enable</Nullable>
+		<AssemblyName>Stringier.Literary</AssemblyName>
+		<RootNamespace>Stringier.Literary</RootNamespace>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<Authors>Patrick Kelly</Authors>
+		<Product>Stringier.Literary</Product>
+		<Description>Literary extensions for Stringier</Description>
+		<Copyright>2020</Copyright>
+		<PackageProjectUrl>https://github.com/Entomy/Stringier-Literary</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/Entomy/Stringier-Literary</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageLicenseUrl></PackageLicenseUrl>
+		<Version>3.0.0</Version>
+		<PackageTags>string, string manipulation, manipulation, string functions, literary, literature, writing, creative, creative writing, constrained writing</PackageTags>
+		<RootNamespace>Stringier</RootNamespace>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<PackageIcon>Logo.png</PackageIcon>
+		<PackageLicenseExpression>BSD-3-Clause</PackageLicenseExpression>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Defender" Version="0.5.0" />
+		<PackageReference Include="System.Memory" Version="4.5.3" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="..\Logo.png" Pack="true" Visible="true" PackagePath="\" />
+	</ItemGroup>
+
+</Project>

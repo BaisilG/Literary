@@ -1,2 +1,4 @@
-# Stringier-Literary
+# Stringier.Literary
+
 Literary extensions of Stringier
+

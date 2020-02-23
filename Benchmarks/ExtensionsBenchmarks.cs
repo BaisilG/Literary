@@ -9,6 +9,7 @@ namespace Benchmarks {
 	[SimpleJob(RuntimeMoniker.Mono)]
 	public class ExtensionsBenchmarks {
 		[Params("", "hello", "detartrated", "Malayalam", "Was it a car or a cat I saw?", "No 'X' in Nixon", "Able was I ere I saw Elba", "A man, a plan, a canal, Panama!", "Café Éfac")]
+		[CLSCompliant(false)]
 		public String String { get; set; }
 
 		[Benchmark]

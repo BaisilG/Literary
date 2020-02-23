@@ -15,6 +15,7 @@ namespace Tests {
 		[InlineData("Able was I ere I saw Elba")]
 		[InlineData("A man, a plan, a canal, Panama!")]
 		[InlineData("Do, O God, no evil deed! Live on! Do good!")]
+		[CLSCompliant(false)]
 		public void IsPalindrome(String source) => Assert.True(source.IsPalindrome());
     }
 }

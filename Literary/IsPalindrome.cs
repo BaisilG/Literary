@@ -52,7 +52,7 @@ namespace Stringier.Literary {
 			Char[] builder = new Char[span.Length];
 			Int32 b = 0;
 			foreach (Char s in span) {
-				if (!(Char.IsControl(s) || Char.IsPunctuation(s) || Char.IsSeparator(s) || Char.IsSymbol(s) || Char.IsWhiteSpace(s))) {
+				if (Char.IsLetterOrDigit(s)) {
 					builder[b++] = s;
 				}
 			}

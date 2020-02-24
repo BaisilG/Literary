@@ -3,7 +3,7 @@
 namespace Stringier.Literary {
 	public static partial class LiteraryExtensions {
 		/// <summary>
-		/// Checks if the <paramref name="string"/> is a palindrome, grapheme-wise.
+		/// Checks if the <paramref name="string"/> is a palindrome, character-wise.
 		/// </summary>
 		/// <param name="string">The <see cref="String"/> to check.</param>
 		/// <returns><see langword="true"/> if <paramref name="string"/> is a palindrome; otherwise, <see langword="false"/>.</returns>

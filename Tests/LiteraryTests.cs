@@ -5,6 +5,7 @@ using Xunit;
 namespace Tests {
 	public class LiteraryTests {
 		[Theory]
+		[InlineData("", true)]
 		[InlineData("subdermatoglyphic", true)]
 		[InlineData("uncopyrightables", true)]
 		[InlineData("hydropneumatics", true)]

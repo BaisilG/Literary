@@ -25,5 +25,13 @@ namespace Tests {
 		[InlineData("A man, a plan, a canal, Panama!")]
 		[InlineData("Do, O God, no evil deed! Live on! Do good!")]
 		public void IsPalindrome(String source) => Assert.True(source.IsPalindrome());
+
+		[Theory]
+		[InlineData("", false)]
+		[InlineData("The quick brown fox jumps over a lazy dog", true)]
+		[InlineData("Jived fox nymph grabs quick waltz", true)]
+		[InlineData("Glib jocks quiz nymph to vex dwarf", true)]
+		[InlineData("boot", false)]
+		public void IsPangram(String source, Boolean expected) => Assert.Equal(expected, source.IsPangram());
     }
 }

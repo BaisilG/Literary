@@ -3,7 +3,15 @@ using Stringier.Literary;
 using Xunit;
 
 namespace Tests {
-	public class LiteraryExtensions {
+	public class LiteraryTests {
+		[Theory]
+		[InlineData("subdermatoglyphic", true)]
+		[InlineData("uncopyrightables", true)]
+		[InlineData("hydropneumatics", true)]
+		[InlineData("the quick fox", true)]
+		[InlineData("boot", false)]
+		public void IsHeterogram(String source, Boolean expected) => Assert.Equal(expected, source.IsHeterogram());
+
 		[Theory]
 		[InlineData("")]
 		[InlineData("a")]
@@ -15,7 +23,6 @@ namespace Tests {
 		[InlineData("Able was I ere I saw Elba")]
 		[InlineData("A man, a plan, a canal, Panama!")]
 		[InlineData("Do, O God, no evil deed! Live on! Do good!")]
-		[CLSCompliant(false)]
 		public void IsPalindrome(String source) => Assert.True(source.IsPalindrome());
     }
 }

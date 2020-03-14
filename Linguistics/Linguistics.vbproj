@@ -16,7 +16,7 @@
 		<RepositoryType>git</RepositoryType>
 		<PackageLicenseUrl></PackageLicenseUrl>
 		<Version>3.0.0</Version>
-		<PackageTags>string, string manipulation, manipulation, string functions, literary, literature, writing, creative, creative writing, constrained writing</PackageTags>
+		<PackageTags>linguistics, language, script, scripts, orthography, writing, writing system</PackageTags>
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 		<PackageIcon>Logo.png</PackageIcon>

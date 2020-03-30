@@ -4,6 +4,8 @@
 [![Build Status](https://dev.azure.com/p-kell/Stringier/_apis/build/status/Stringier.Literary?branchName=master)](https://dev.azure.com/p-kell/Stringier/_build/latest?definitionId=24&branchName=master)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/096cec0007b449f2a8b1c2356e1168fd)](https://www.codacy.com/gh/Stringier/Literary?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Stringier/Stringier-Literary&amp;utm_campaign=Badge_Grade)
 
+[![Beerpay](https://img.shields.io/beerpay/Entomy/Stringier)](https://beerpay.io/Entomy/Stringier)
+
 Literary extensions of Stringier. Highly useful for constrained and creative writing. Not very useful for everyone else.
 
 # Documentation:

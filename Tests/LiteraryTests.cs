@@ -36,6 +36,8 @@ namespace Tests {
 		[InlineData("A man, a plan, a canal, Panama!", true)]
 		[InlineData("Do, O God, no evil deed! Live on! Do good!", true)]
 		[InlineData("boot", false)]
+		[InlineData("Baêab", true)]
+		[InlineData("Bâeâb", true)]
 		public void IsPalindrome(String source, Boolean expected) => Assert.Equal(expected, source.IsPalindrome());
 
 		[Theory]

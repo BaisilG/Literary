@@ -28,15 +28,9 @@ namespace Stringier.Literary {
 					return 0;
 				}
 			}
-			private set {
-				Glyphs[key.ToUpper()] += value;
-			}
 		}
 
-		public Int32 this[Char key] {
-			get => this[key];
-			set => this[key] = value;
-		}
+		public Int32 this[Char key] => this[new Glyph(key)];
 
 		/// <inheritdoc/>
 		public IEnumerable<Glyph> Keys => Glyphs.Keys;
@@ -58,7 +52,7 @@ namespace Stringier.Literary {
 		public void Add(String @string) {
 			foreach (Glyph glyph in @string.EnumerateGlyphs()) {
 				if (ContainsKey(glyph)) {
-					this[glyph]++;
+					Glyphs[glyph.ToUpper()]++;
 				}
 			}
 		}

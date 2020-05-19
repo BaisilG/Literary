@@ -25,6 +25,48 @@ namespace Tests {
 		public void IsHeterogram_English_Shavian(String source, Boolean expected) => Assert.Equal(expected, source.IsHeterogram(English[Shavian]));
 
 		[Theory]
+		[InlineData("", true, 0)]
+		[InlineData("subdermatoglyphic", true, 1)]
+		[InlineData("uncopyrightables", true, 1)]
+		[InlineData("hydropneumatics", true, 1)]
+		[InlineData("the quick fox", true, 1)]
+		[InlineData("deed", true, 2)]
+		[InlineData("vivienne", true, 2)]
+		[InlineData("intestines", true, 2)]
+		[InlineData("deeded", true, 3)]
+		[InlineData("sestettes", true, 3)]
+		[InlineData("geggee", true, 3)]
+		public void IsIsogram_English_Latin(String source, Boolean expected, Int32 order) {
+			if (expected) {
+				Assert.True(source.IsIsogram(English[Latin], out Int32 ord));
+				Assert.Equal(order, ord);
+			} else {
+				Assert.False(source.IsIsogram(English[Latin]));
+			}
+		}
+
+		[Theory]
+		[InlineData("", true, 0)]
+		[InlineData("𐑕𐑳𐑚𐑛𐑧𐑮𐑥𐑩𐑑𐑪𐑜𐑤𐑭𐑐𐑣𐑦𐑗", true, 1)]
+		[InlineData("𐑳𐑯𐑗𐑪𐑐𐑭𐑮𐑦𐑜𐑣𐑑𐑩𐑚𐑤𐑧𐑕", true, 1)]
+		[InlineData("𐑣𐑭𐑛𐑮𐑪𐑐𐑯𐑧𐑳𐑥𐑩𐑑𐑦𐑗𐑕", true, 1)]
+		[InlineData("𐑑𐑣𐑧 𐑶𐑳𐑦𐑗𐑒 𐑓𐑪𐑻", true, 1)]
+		[InlineData("𐑛𐑧𐑧𐑛", true, 2)]
+		[InlineData("𐑝𐑦𐑝𐑦𐑧𐑯𐑯𐑧", true, 2)]
+		[InlineData("𐑦𐑯𐑑𐑧𐑕𐑑𐑦𐑯𐑧𐑕", true, 2)]
+		[InlineData("𐑛𐑧𐑧𐑛𐑧𐑛", true, 3)]
+		[InlineData("𐑕𐑧𐑕𐑑𐑧𐑑𐑑𐑧𐑕", true, 3)]
+		[InlineData("𐑜𐑧𐑜𐑜𐑧𐑧", true, 3)]
+		public void IsIsogram_English_Shavian(String source, Boolean expected, Int32 order) {
+			if (expected) {
+				Assert.True(source.IsIsogram(English[Shavian], out Int32 ord));
+				Assert.Equal(order, ord);
+			} else {
+				Assert.False(source.IsIsogram(English[Shavian]));
+			}
+		}
+
+		[Theory]
 		[InlineData("", true)]
 		[InlineData("a", true)]
 		[InlineData("detartrated", true)]
